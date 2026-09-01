@@ -1,0 +1,32 @@
+EvoPS5 
+
+2. 
+
+(1) What should happen to the rate of incomplete coalescence in our gene trees if we increase the population size by (say) an order of magnitude?
+
+If we increase the population size, the rate of incomplete coalescence would go up because having a larger population would mean it might take longer for lineages to coalesce together. A larger population would mean a greater number of alleles present, thus the population of alleles would be more stable against chance events that can cause shifts in the allele frequencies. 
+
+(2) What should happen if we change the age of the tree?
+
+If we change the age of the tree and the time between speciation events, that gives the population of alleles more time to change/shift allele frequencies in between speciation events. Therefore, the alleles would be less likely to persist through these speciation events with more time given to change between these events. 
+
+When I changed the root age from 10 to 100, I saw that the evolutionary relationships between the different species had actually changed. 
+
+(1) How often do we see non-monophyletic species across the gene trees? Should this go up or down if we make the population size smaller?
+
+When we first ran all the gene trees, I would say that we saw non-monophyletic species pretty often across the gene trees. This should go down if we make the pop size smaller since that would decrease the number of possibilities when it comes to coalescing. I ran the code again with a smaller pop size, and indeed I saw more monophyletic species (less non-monophyletic species) after doing so. 
+
+(2) How many gene trees have topologies that match the species tree? Again, should this go up or down if we make the population size smaller?
+
+I think only two of the gene trees had topologies that matched the species tree. When I ran the code again but with a smaller pop size of 3, there were definitely more gene trees that matched the topology of the species tree. This makes sense with a smaller population size because those alleles would be less stable and thus more prone to shifts in allele frequencies, making it less likely to persist through speciation events. 
+
+
+6. Diagnose the MCMC as you did in PS4. Did your analysis mix and converge?
+
+After looking at the trace plot in Tracer, it looks like the MCMC did not converge well. The plot itself looks like it's moving around a lot across the plot instead of staying in the same relative space. The ESS value, which is used as a convergence diagnostic, is 15. Typically, a good ESS value would be over 200. However, the plot doesn't look too blocky, so it looks like it has a frequent enough number of moves (which is good for mixing!)
+
+
+7. Once your analysis is finished, take a look at your trees. Do the gene trees differ from one another? Do they differ from the species tree? 
+
+The gene trees do differ from each other (some of them only slightly). I compared the gene trees by looking at the topologies to see if they were exactly the same or not. The gene trees overall also differ from the species tree too. I interpret that to mean that the gene histories differ from the species history, and that therefore the alleles for the genes persisted through some speciation events in order to differ like that. As mentioned in answers above, this incongruence between the species tree and the gene trees could in part be due to parameters of the species trees like effective population size and time between speciation events. 
+

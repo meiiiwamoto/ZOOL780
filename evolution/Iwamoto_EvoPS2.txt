@@ -1,0 +1,32 @@
+Evolution PS 2:
+
+#1. The MLE for this branch is 0.3041016. The likelihood surface is hill shaped. The plot above shows this MLE as the peak of the hill- and it has relatively steeper slopes going up to the hill. (See attached for plot)
+
+#2. After changing the sequences to have a larger branch length between them (initially I changed it from having 2 substitutions to 4), the MLE for branch lengths increased to 0.8239258. When all base positions have experienced a substitutions the MLE goes up to 25.25. In the plot, this shows as the likelihood surface no longer having a hill-shape with a peak in the middle, but rather a peak at the edge of the plot instead. Biologically, this means that given the observed data, it’s most probable that the branch length/genetic distance estimate increases as the number of substitutions in the sequences increase. (See attached for plot)
+
+
+
+#3. To use a different substitution model rather than the Jukes Cantor model, you would modify the following lines of code:
+
+pZero = (1/4) + ((3/4)*exp(-4*(t/3)))
+
+ pOne = (1/4) - ((1/4)*exp(-4*(t/3)))
+
+When you are initially calculating the probabilities of sites changing/not changing. 
+
+#4. Attached
+
+#5. When comparing the inferences using the two different models, it looks like although there are differences in branch lengths for each phylogeny, the overall relationships between the clades seem the same for the two models. The MLE for the GTR model was -121805.535 and for the Jukes-Cantor model it was -125476.797, which are slightly different from each other. 
+
+
+
+
+
+
+
+
+
+
+
+
+
